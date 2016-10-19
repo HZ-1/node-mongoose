@@ -1,0 +1,19 @@
+extends ../layout
+block content
+	.container
+		.row
+			table.table.table-hover.table-bordered
+				thead
+					tr
+						th 分类名
+						th 更新时间
+						th 更新
+						th 删除
+				tbody 
+					each item in categories
+						tr(class="item-id-#{item._id}")
+							td #{item.name}
+							td #{moment(item.meta.updateAt).format('YYYY-MM-DD HH:MM:SS')}
+							td: a(target="_blank", href="../movie/#{item._id}") 查看
+							td
+								button.btn.btn-danger.mini.del(type="button",data-id="#{item._id}") 删除

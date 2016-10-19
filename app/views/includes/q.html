@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>电影首页</title>
+    <link href="../../../public/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../../public/css/main.css" rel="stylesheet">
+    <script src="../../../public/lib/jquery/dist/jquery.min.js"></script>
+    <script src="../../../public/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+</head>
+<body >
+<div class="container">
+    <div class="row">
+        <div class="page-header clearfix">
+            <h1>电影首页</h1>
+            <div class="col-md-4"><small>重度科幻迷</small></div>
+            <div class="col-md-8">
+                <form method="GET" action="/results">
+                    <div class="input-group col-sm-4 pull-right">
+                        <input type="text" name="q" class="form-control"><span class="input-group-btn">
+                  <button type="submit" class="btn btn-default">搜索</button></span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!--<div class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container">
+        <div class="navbar-header"><a href="/" class="navbar-brand">重度科幻迷</a></div>
+        <p class="navbar-text navbar-right"><span>欢迎您,1</span><span>&nbsp;&nbsp;<img id="login-avatar" src="/avatar/1475741888690.png"></span><span>&nbsp;|&nbsp;</span><a href="/logout" class="navbar-link">登出</a></p>
+    </div>
+</div>-->
+<!--
+<div id="signupModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form method="POST" action="/user/signup" enctype="multipart/form-data" class="form-horizontal">
+                <div class="modal-header">注册</div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="signupName" class="col-md-2">用户名</label>
+                        <div class="col-md-10">
+                            <input id="signupName" name="user[name]" type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="signPass" class="col-md-2">密码</label>
+                        <div class="col-md-10">
+                            <input id="signPass" name="user[password]" type="password" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2">选择用户类型</label>
+                        <div class="col-md-10">
+                            <label class="radio-inline">
+                                <input name="user[role]" type="radio" value="0" checked>普通用户
+                            </label>
+                            <label class="radio-inline">
+                                <input name="user[role]" type="radio" value="20">管理员用户
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2">选择头像</label>
+                        <div class="col-md-10">
+                            <input type="file" name="avatar">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" data-dismiss="modal" class="btn btn-default">关闭</button>
+                    <button type="submit" class="btn btn-success">提交</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div id="signinModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form method="POST" action="/user/login">
+                <div class="modal-header">登录</div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="signinName">用户名</label>
+                        <input id="signinName" name="user[name]" type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="signinPassword">密码</label>
+                        <input id="signinPassword" name="user[password]" type="password" class="form-control">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" data-dismiss="modal" class="btn btn-default">关闭</button>
+                    <button type="submit" class="btn btn-success">提交</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>-->
+<div id="green_channel" style="bottom: 3px; position: relative; right: 350px; background: rgb(255, 255, 255);">
+
+        <p>重度科幻迷</p>
+
+
+    <a href="javascript:void(0);" id="green_channel_digg" >好文要顶</a>
+    <a id="green_channel_wechat" href="javascript:void(0);" title="分享至微信" >99</a>
+</div>
+<div class="container" style="overflow: auto" >
+    <div class="row" >
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3><a href="/results?cat=57f610501823511dbc30ba29&amp;p=0">中国</a></h3>
+            </div>
+            <div class="panel-body">
+                <div class="col-md-2">
+                    <div class="thumbnail"><a href="/movie/57f6101d1823511dbc30ba28"><img src="https://img3.doubanio.com/view/movie_poster_cover/lpst/public/p2159072475.jpg" alt="无人区" width="120"></a>
+                        <div class="caption">
+                            <h3>无人区</h3>
+                            <p><a href="/movie/57f6101d1823511dbc30ba28" role="button" class="btn btn-primary">查看详情</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3><a href="/results?cat=57f7a43a2ff232042c054459&amp;p=0">韩国</a></h3>
+            </div>
+            <div class="panel-body">
+                <div class="col-md-2">
+                    <div class="thumbnail"><a href="/movie/57f60f561823511dbc30ba27"><img src="https://img3.doubanio.com/view/movie_poster_cover/lpst/public/p2380677316.jpg" alt="湄公河行动" width="120"></a>
+                        <div class="caption">
+                            <h3>湄公河行动</h3>
+                            <p><a href="/movie/57f60f561823511dbc30ba27" role="button" class="btn btn-primary">查看详情</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

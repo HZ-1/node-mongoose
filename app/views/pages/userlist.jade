@@ -1,0 +1,29 @@
+extends ../layout
+block content
+	.container
+		.row
+			table.table.table-hover.table-bordered#user-list
+				thead
+					tr
+						th 头像
+						th 用户名
+						th 注册时间
+						th 查看
+						th 更新
+						th 删除
+				tbody
+					each item in users
+						tr(id="item-id-#{item._id}")
+							td
+								if item.avatar.indexOf('default')>-1
+									img(src="#{item.avatar}", width="50", height="50")
+								else
+									img(src="/avatar/#{item.avatar}", width="50", height="50")
+							td #{item.name}
+							td #{moment(item.meta.updateAt).format('YYYY-MM-DD HH:MM:SS')}
+							td: a(target="_blank", href="/movie/:id") 查看
+							td: a(target="_blank", href="/admin/update/#{item._id}") 修改
+							td
+								button.btn.btn-danger.mini.del(type="button",data-id="#{item._id}") 删除
+
+	script(src="/js/user.js")

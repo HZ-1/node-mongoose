@@ -1,0 +1,13 @@
+extends ../layout
+block content
+	.container
+		.row
+			.col-md-5
+				form(action="/user/login", method="post")
+					.form-group
+						label(for="loginName") 用户名
+						input#loginName.form-control(name="user[name]", type="text")
+					.form-group
+						label(for="loginPass") 密码
+						input#loginPass.form-control(name="user[password]", type="password")
+					button.btn.btn-success(type="submit") 登录

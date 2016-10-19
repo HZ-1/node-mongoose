@@ -1,0 +1,26 @@
+{
+  "name": "node-movie-demo",
+  "authors": [
+    "jia58960 <547221469@qq.com>"
+  ],
+  "description": "just a express demo",
+  "main": "app.js",
+  "keywords": [
+    "express-demo",
+    "movie-demo"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
